@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;800&display=swap');
+@import "colors";
+
+$font-sizes: (
+    'xs': 0.75rem,
+    'sm': 0.875rem,
+    'base': 1rem,
+    'lg': 1.125rem,
+    'xl': 1.5,
+    'xxl': 2rem,
+);
+$colors: (
+    'primary': $primary,
+    'secundary': $secundary,
+    'accent': $accent,
+    'light': $light,
+    'dark': $dark,
+);
+
+@each $key, $value in $colors {
+    .text-#{$key}{
+        color: $value;
+    }
+}
+
+@each $key, $value in $font-sizes {
+    .text-#{$key}{
+        font-size: $value;
+    }
+}
+
+$font-weight: (
+    'light': 300,
+    'normal': 400,
+    'extrabold': 800,
+);
+@each $key, $value in $font-weight {
+    .text-#{$key}{
+        font-weight: $value;
+    }
+}
+
+$font-align: (
+    'left': left,
+    'center': center,
+    'right': right,
+    'justify': justify,
+);
+@each $key, $value in $font-align {
+    .text-#{$key}{
+        text-align: $value;
+    }
+}

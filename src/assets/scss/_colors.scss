@@ -1,0 +1,25 @@
+$primary: hsl(61, 88%, 56%);
+$secundary: hsl(241, 88%, 56%);
+$accent: hsl(144, 90%, 33%);
+$dark: hsl(240, 1%, 23%);
+$light: hsl(0, 25%, 98%);
+
+$colors:(
+    'primary': $primary,
+    'secundary': $secundary,
+    'accent': $accent,
+    'dark': $dark,
+    'light': $light,
+);
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color;
+    }
+    .text-color-#{$name} {
+      color: $color;
+    }
+    .border-#{$name} {
+      border-color: $color;
+    }
+  }
