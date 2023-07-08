@@ -1,7 +1,7 @@
 <template>
     <footer>
         <p class="text-xs">Terms of Service | Privacy Policy </p>
-        <p class="text-xs">Chronos - {{ year }}</p>
+        <p class="text-xs">Chronos © - {{ year }}</p>
     </footer>
 </template>
 

@@ -8,14 +8,6 @@
         </section>
         <section class="form-signup">
             <section class="form-control">
-                <label for="input-name" class="text-bold">Name</label>
-                <input type="text" v-model="name" id="input-name" placeholder="Enter your name">
-            </section>
-            <section class="form-control">
-                <label for="input-username" class="text-bold">Username</label>
-                <input type="text"  v-model="username" id="input-username" placeholder="Enter your name">
-            </section>
-            <section class="form-control">
                 <label for="input-email" class="text-bold">Email Address</label>
                 <input type="email" v-model="email"  id="input-email" placeholder="Enter your name">
             </section>
@@ -24,11 +16,8 @@
                 <input type="password" v-model="password" id="input-password" placeholder="Enter your name">
             </section>
             <section class="form-control">
-                <button class="btn-primary" @click="signUp()">Start</button>
+                <button class="btn-primary" @click="signIn()">Start</button>
             </section>
-        </section>
-        <section>
-            <p>Already a member?<a href="/signin">Sign in</a></p>
         </section>
     </main>
     <FooterComponent></FooterComponent>
@@ -52,18 +41,16 @@ export default {
         }
     },
     methods: {
-        signUp() {
+        signIn() {
 
             let user = {
-                name: this.name,
-                username: this.username,
                 email: this.email,
                 password: this.password
             }
             
             console.log({ user });
 
-           AuthService.signUp(user as User)
+           AuthService.signIn(user as User)
                 .then((res) => {
                     console.log(res.data);
                 })
@@ -76,10 +63,3 @@ export default {
 }
 
 </script>
-<style>
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-</style>

@@ -1,11 +1,9 @@
 export default interface User{
-    id: number,
-    name: string, 
-    username: string,
+    name?: string, 
+    username?: string,
     email: string,
     password: string,
-    token: string,
-    createdAt: Date,
-    updatedAt: Date,
-    deletedAt: Date
+    token?: string,
+    createdAt?: Date,
+    updatedAt?: Date
 }

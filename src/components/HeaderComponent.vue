@@ -1,5 +1,5 @@
 <template>
 <header>
-    <p class="text-secundary text-xl text-extrabold">Chronos</p>
+    <h3 class="text-secundary text-xl text-extrabold">Chronos</h3>
 </header>
 </template>
